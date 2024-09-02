@@ -63,25 +63,25 @@ namespace TagManagerApp
 
         private void MenuItem_AddTag_Click(object sender, RoutedEventArgs e)
         {
-            //if (TagTreeView.SelectedItem is TagItem selectedTag)
-            //{
-            //    var dialog = new InputDialog("Введите имя нового тега:");
-            //    if (dialog.ShowDialog() == true)
-            //    {
-            //        string name = dialog.Input;
-            //        var addTagDialog = new AddTagDialog();
-            //        if (addTagDialog.ShowDialog() == true)
-            //        {
-            //            string type = addTagDialog.SelectedType;
-            //            object value = addTagDialog.InputValue;
+            if (TagTreeView.SelectedItem is TagItem selectedTag)
+            {
+                var dialog = new InputDialog("Введите имя нового тега:");
+                if (dialog.ShowDialog() == true)
+                {
+                    string name = dialog.Input;
+                    var addTagDialog = new AddTagDialog();
+                    if (addTagDialog.ShowDialog() == true)
+                    {
+                        string type = addTagDialog.SelectedType;
+                        object value = addTagDialog.InputValue;
 
-            //            var newTag = new TagItem(name, value);
-            //            selectedTag.AddChildTag(newTag);
-            //            TagTreeView.ItemsSource = null;
-            //            TagTreeView.ItemsSource = storage.Root.GetDirectChildren();
-            //        }
-            //    }
-            //}
+                        var newTag = new TagItem(name, value);
+                        selectedTag.AddChildTag(newTag);
+                        TagTreeView.ItemsSource = null;
+                        TagTreeView.ItemsSource = storage.Root.GetDirectChildren();
+                    }
+                }
+            }
         }
 
         private void MenuItem_RenameTag_Click(object sender, RoutedEventArgs e)

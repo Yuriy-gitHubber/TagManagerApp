@@ -22,6 +22,14 @@ namespace TagManagerApp
 
         public object GetTagValue() { return _tagValue; } // Метод возврата значения тега
 
+        public string DisplayValue
+        {
+            get
+            {
+                return _tagValue != null ? _tagValue.ToString() : "none";
+            }
+        }
+
         public string TagName
         {
             get { return _tagName; }

@@ -1,0 +1,21 @@
+﻿<Window x:Class="TagManagerApp.AddTagDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TagManagerApp"
+        mc:Ignorable="d"
+        Title="AddTagDialog" Height="450" Width="800">
+    <Grid>
+        <Label Content="Выберите тип:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <ComboBox x:Name="cbType" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" Width="120" SelectionChanged="cbType_SelectionChanged">
+            <ComboBoxItem Content="int" />
+            <ComboBoxItem Content="double" />
+            <ComboBoxItem Content="bool" />
+            <ComboBoxItem Content="none" />
+        </ComboBox>
+        <Label Content="Значение:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,70,0,0" x:Name="lblValue" Visibility="Collapsed"/>
+        <TextBox x:Name="txtValue" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Width="360" Visibility="Collapsed"/>
+        <Button x:Name="btnOk" Content="OK" Width="75" Height="23" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Click="btnOk_Click"/>
+    </Grid>
+</Window>
