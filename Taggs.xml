@@ -11,7 +11,15 @@
         <Partition1>
           <Size>2.5600019200064E+33</Size>
           <Used>128000</Used>
-          <Free>128000</Free>
+          <Free>
+            <Repos>
+              <Core>2.55562</Core>
+              <Video>True</Video>
+              <Powers>
+                <Hub />
+              </Powers>
+            </Repos>
+          </Free>
         </Partition1>
         <Partition2>
           <Size>256000</Size>
@@ -25,10 +33,5 @@
       </DetailedUsage>
     </DiskUsage>
     <Temperature>72.5</Temperature>
-    <IsOperational>
-      <New>
-        <Cost>100000</Cost>
-      </New>
-    </IsOperational>
   </Server>
 </Root>
