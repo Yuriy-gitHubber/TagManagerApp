@@ -1,0 +1,10 @@
+﻿<Window x:Class="TagManagerApp.InputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="InputDialog" Height="150" Width="400">
+    <StackPanel Margin="10">
+        <TextBlock x:Name="lblQuestion" Text="Введите значение:" Margin="0,0,0,10"/>
+        <TextBox x:Name="txtAnswer" Width="360"/>
+        <Button Content="OK" Width="80" HorizontalAlignment="Right" Margin="0,10,0,0" Click="btnDialogOk_Click"/>
+    </StackPanel>
+</Window>
